@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Реферальная программа — Lumino VPN</title>
+<meta name="robots" content="index,follow">
+<meta name="description" content="Как приглашать друзей и получать бонусы.">
+<meta property="og:title" content="Реферальная программа — Lumino VPN">
+<meta property="og:description" content="Как приглашать друзей и получать бонусы.">
+<meta property="og:type" content="article">
+<style>
+:root{
+  --bg:#0c0a13; --bg2:#110e1c; --surface:rgba(255,255,255,.045);
+  --surface-2:rgba(255,255,255,.07); --border:rgba(255,255,255,.09);
+  --text:#ece9f5; --muted:#9c97b3; --heading:#fbfaff;
+  --accent:#c026d3; --accent2:#7c3aed; --accent-soft:rgba(192,38,211,.14);
+  --todo-bg:rgba(250,204,21,.16); --todo-bd:rgba(250,204,21,.5); --todo-tx:#fde68a;
+  --radius:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:
+    radial-gradient(1100px 520px at 50% -10%, rgba(124,58,237,.16), transparent 60%),
+    radial-gradient(900px 460px at 90% 0%, rgba(192,38,211,.12), transparent 55%),
+    var(--bg);
+  color:var(--text);
+  font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+a{color:#e879f9; text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:760px; margin:0 auto; padding:0 20px}
+
+/* top bar */
+.topbar{position:sticky; top:0; z-index:10; backdrop-filter:blur(14px);
+  background:rgba(12,10,19,.72); border-bottom:1px solid var(--border)}
+.topbar .wrap{display:flex; align-items:center; gap:12px; height:60px}
+.brand{display:flex; align-items:center; gap:10px; font-weight:700; color:var(--heading)}
+.brand .logo{width:30px;height:30px;border-radius:9px;
+  background:linear-gradient(135deg,var(--accent2),var(--accent));
+  display:grid;place-items:center;font-size:16px;box-shadow:0 6px 18px rgba(192,38,211,.4)}
+.brand small{display:block;font-weight:500;font-size:11px;color:var(--muted);letter-spacing:.04em}
+.spacer{flex:1}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:8px 15px;border-radius:999px;
+  font-size:14px;font-weight:600;border:1px solid var(--border);color:var(--text);
+  background:var(--surface);transition:.15s}
+.btn:hover{background:var(--surface-2);text-decoration:none;border-color:rgba(255,255,255,.18)}
+.btn.primary{border:0;color:#fff;background:linear-gradient(135deg,var(--accent2),var(--accent));
+  box-shadow:0 6px 20px rgba(192,38,211,.35)}
+.btn.primary:hover{filter:brightness(1.08)}
+
+/* document */
+main{padding:38px 0 60px}
+.doc h1{font-size:clamp(26px,5vw,36px);line-height:1.2;margin:.2em 0 .6em;color:var(--heading);
+  letter-spacing:-.01em}
+.doc h2{font-size:1.32em;margin:1.9em 0 .6em;color:var(--heading);
+  padding-top:.4em}
+.doc h3{font-size:1.1em;margin:1.4em 0 .4em;color:var(--heading)}
+.doc p{margin:.7em 0}
+.doc em{color:var(--muted);font-style:normal;font-size:.92em}
+.doc strong{color:#fff}
+.doc ul,.doc ol{padding-left:1.3em;margin:.7em 0}
+.doc li{margin:.35em 0}
+.doc li::marker{color:var(--accent)}
+.doc hr{border:0;height:1px;background:var(--border);margin:2.2em 0}
+.doc blockquote{margin:1.3em 0;padding:14px 18px;border-radius:12px;
+  background:var(--accent-soft);border:1px solid rgba(192,38,211,.28);
+  border-left:3px solid var(--accent);color:#f3e8ff}
+.doc blockquote p{margin:.2em 0}
+.doc code{background:var(--surface-2);padding:.15em .45em;border-radius:6px;
+  font-size:.88em;font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace}
+.doc pre{background:#08060e;border:1px solid var(--border);border-radius:12px;
+  padding:16px 18px;overflow:auto;line-height:1.55}
+.doc pre code{background:none;padding:0;font-size:.9em;color:#d7d3e6}
+.doc table{border-collapse:collapse;width:100%;margin:1.2em 0}
+.doc th,.doc td{border:1px solid var(--border);padding:9px 12px;text-align:left}
+
+/* TODO placeholders */
+mark.todo{background:var(--todo-bg);border:1px dashed var(--todo-bd);color:var(--todo-tx);
+  padding:.05em .4em;border-radius:6px;font-weight:600}
+
+/* index */
+.hero{text-align:center;padding:46px 0 22px}
+.hero .biglogo{width:74px;height:74px;border-radius:20px;margin:0 auto 18px;
+  background:linear-gradient(135deg,var(--accent2),var(--accent));
+  display:grid;place-items:center;font-size:38px;box-shadow:0 14px 40px rgba(192,38,211,.45)}
+.hero h1{font-size:clamp(30px,7vw,44px);margin:0 0 8px;color:var(--heading);letter-spacing:-.02em}
+.hero p{color:var(--muted);font-size:1.08em;margin:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin:28px 0}
+.card{display:block;padding:20px;border-radius:var(--radius);background:var(--surface);
+  border:1px solid var(--border);transition:.16s;color:inherit}
+.card:hover{transform:translateY(-3px);background:var(--surface-2);
+  border-color:rgba(192,38,211,.4);text-decoration:none;
+  box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.card .ic{font-size:26px}
+.card h3{margin:12px 0 6px;color:var(--heading);font-size:1.12em}
+.card p{margin:0;color:var(--muted);font-size:.92em}
+.support{margin:8px 0 0;padding:22px;border-radius:var(--radius);text-align:center;
+  background:linear-gradient(135deg,rgba(124,58,237,.18),rgba(192,38,211,.18));
+  border:1px solid rgba(192,38,211,.3)}
+.support h3{margin:0 0 6px;color:var(--heading)}
+.support p{margin:0 0 14px;color:var(--muted)}
+
+footer{border-top:1px solid var(--border);padding:26px 0 40px;color:var(--muted);font-size:.9em}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;justify-content:space-between}
+footer a{color:var(--muted)}
+@media(max-width:520px){.topbar .brand small{display:none}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="../"><span class="logo">🛡</span><span>Lumino VPN<small>Реферальная программа</small></span></a>
+  <span class="spacer"></span>
+  <a class="btn" href="../">Все документы</a>
+  <a class="btn primary" href="https://t.me/LuminoVPNBot">Поддержка</a>
+</div></header>
+<main><div class="wrap"><article class="doc">
+<h1 id="gift-как-пользоваться-реферальной-программой-и-зарабатывать">🎁
+Как пользоваться реферальной программой и зарабатывать</h1>
+<p>Делитесь Lumino VPN с друзьями — и получайте бонусы за каждого! Чем
+больше людей вы приглашаете, тем больше зарабатываете. 💰</p>
+<hr />
+<h2 id="bulb-как-это-работает">💡 Как это работает</h2>
+<ol type="1">
+<li>Вы получаете <strong>личную реферальную ссылку</strong>.</li>
+<li>Друг переходит по ней и оформляет подписку.</li>
+<li>Вам начисляется <strong>вознаграждение</strong> на баланс. 🎉</li>
+</ol>
+<p>Всё честно и автоматически — никаких сложных условий.</p>
+<hr />
+<h2 id="link-где-взять-свою-ссылку">🔗 Где взять свою ссылку</h2>
+<ol type="1">
+<li>Откройте бот <a
+href="https://t.me/LuminoVPNBot">@LuminoVPNBot</a>.</li>
+<li>Перейдите в раздел <strong>«👥 Реферальная программа»</strong>.</li>
+<li>Нажмите <strong>«Поделиться ссылкой»</strong> — бот пришлёт вашу
+персональную ссылку и кнопку для быстрой отправки друзьям.</li>
+</ol>
+<hr />
+<h2 id="money_with_wings-что-вы-получаете">💸 Что вы получаете</h2>
+<ul>
+<li><strong>Бонус за каждого друга</strong>, который оформил подписку по
+вашей ссылке.</li>
+<li>Начисления приходят на <strong>внутренний баланс</strong> в
+боте.</li>
+<li>Баланс можно использовать для <strong>оплаты и продления</strong>
+собственных подписок.</li>
+</ul>
+<blockquote>
+<p>Точный размер вознаграждения отображается в разделе «Реферальная
+программа» — он может меняться в рамках акций. 🔥</p>
+</blockquote>
+<hr />
+<h2 id="rocket-где-делиться-чтобы-заработать-больше">🚀 Где делиться,
+чтобы заработать больше</h2>
+<ul>
+<li>👨‍👩‍👧 В чатах с друзьями и семьёй — особенно тем, кому важен стабильный
+интернет.</li>
+<li>💬 В тематических Telegram-чатах и комментариях (там, где это
+разрешено правилами).</li>
+<li>📱 В сторис и постах в соцсетях — коротко расскажите, чем вам удобен
+Lumino VPN.</li>
+<li>🎮 В игровых и рабочих сообществах, где ценят скорость и доступ без
+ограничений.</li>
+</ul>
+<p><strong>Совет:</strong> делитесь не просто ссылкой, а пользой —
+«стабильно работает на мобильном интернете», «YouTube без рекламы»,
+«подключение за минуту». Так переходят охотнее. 😉</p>
+<hr />
+<h2 id="question-частые-вопросы">❓ Частые вопросы</h2>
+<p><strong>Сколько друзей можно пригласить?</strong> Без ограничений.
+Чем больше — тем выше доход. 📈</p>
+<p><strong>Когда начисляется бонус?</strong> После того как приглашённый
+друг оформит оплаченную подписку.</p>
+<p><strong>Можно ли вывести баланс?</strong> Баланс используется внутри
+Lumino VPN для оплаты и продления подписок. Подробности — в разделе
+реферальной программы.</p>
+<hr />
+<h2 id="speech_balloon-остались-вопросы">💬 Остались вопросы?</h2>
+<p>Поддержка всегда поможет: <a
+href="https://t.me/LuminoVPNBot">@LuminoVPNBot</a></p>
+<p>Приглашайте друзей и пользуйтесь <strong>Lumino VPN</strong> вместе!
+🛡</p>
+
+</article></div></main>
+<footer><div class="wrap">
+  <span>© Lumino VPN — свободный интернет под защитой 🛡</span>
+  <span><a href="../">Документы</a> · <a href="https://t.me/LuminoVPNBot">Поддержка</a></span>
+</div></footer>
+</body>
+</html>

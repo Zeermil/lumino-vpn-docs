@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Пользовательское соглашение — Lumino VPN</title>
+<meta name="robots" content="index,follow">
+<meta name="description" content="Условия использования сервиса Lumino VPN.">
+<meta property="og:title" content="Пользовательское соглашение — Lumino VPN">
+<meta property="og:description" content="Условия использования сервиса Lumino VPN.">
+<meta property="og:type" content="article">
+<style>
+:root{
+  --bg:#0c0a13; --bg2:#110e1c; --surface:rgba(255,255,255,.045);
+  --surface-2:rgba(255,255,255,.07); --border:rgba(255,255,255,.09);
+  --text:#ece9f5; --muted:#9c97b3; --heading:#fbfaff;
+  --accent:#c026d3; --accent2:#7c3aed; --accent-soft:rgba(192,38,211,.14);
+  --todo-bg:rgba(250,204,21,.16); --todo-bd:rgba(250,204,21,.5); --todo-tx:#fde68a;
+  --radius:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:
+    radial-gradient(1100px 520px at 50% -10%, rgba(124,58,237,.16), transparent 60%),
+    radial-gradient(900px 460px at 90% 0%, rgba(192,38,211,.12), transparent 55%),
+    var(--bg);
+  color:var(--text);
+  font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+a{color:#e879f9; text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:760px; margin:0 auto; padding:0 20px}
+
+/* top bar */
+.topbar{position:sticky; top:0; z-index:10; backdrop-filter:blur(14px);
+  background:rgba(12,10,19,.72); border-bottom:1px solid var(--border)}
+.topbar .wrap{display:flex; align-items:center; gap:12px; height:60px}
+.brand{display:flex; align-items:center; gap:10px; font-weight:700; color:var(--heading)}
+.brand .logo{width:30px;height:30px;border-radius:9px;
+  background:linear-gradient(135deg,var(--accent2),var(--accent));
+  display:grid;place-items:center;font-size:16px;box-shadow:0 6px 18px rgba(192,38,211,.4)}
+.brand small{display:block;font-weight:500;font-size:11px;color:var(--muted);letter-spacing:.04em}
+.spacer{flex:1}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:8px 15px;border-radius:999px;
+  font-size:14px;font-weight:600;border:1px solid var(--border);color:var(--text);
+  background:var(--surface);transition:.15s}
+.btn:hover{background:var(--surface-2);text-decoration:none;border-color:rgba(255,255,255,.18)}
+.btn.primary{border:0;color:#fff;background:linear-gradient(135deg,var(--accent2),var(--accent));
+  box-shadow:0 6px 20px rgba(192,38,211,.35)}
+.btn.primary:hover{filter:brightness(1.08)}
+
+/* document */
+main{padding:38px 0 60px}
+.doc h1{font-size:clamp(26px,5vw,36px);line-height:1.2;margin:.2em 0 .6em;color:var(--heading);
+  letter-spacing:-.01em}
+.doc h2{font-size:1.32em;margin:1.9em 0 .6em;color:var(--heading);
+  padding-top:.4em}
+.doc h3{font-size:1.1em;margin:1.4em 0 .4em;color:var(--heading)}
+.doc p{margin:.7em 0}
+.doc em{color:var(--muted);font-style:normal;font-size:.92em}
+.doc strong{color:#fff}
+.doc ul,.doc ol{padding-left:1.3em;margin:.7em 0}
+.doc li{margin:.35em 0}
+.doc li::marker{color:var(--accent)}
+.doc hr{border:0;height:1px;background:var(--border);margin:2.2em 0}
+.doc blockquote{margin:1.3em 0;padding:14px 18px;border-radius:12px;
+  background:var(--accent-soft);border:1px solid rgba(192,38,211,.28);
+  border-left:3px solid var(--accent);color:#f3e8ff}
+.doc blockquote p{margin:.2em 0}
+.doc code{background:var(--surface-2);padding:.15em .45em;border-radius:6px;
+  font-size:.88em;font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace}
+.doc pre{background:#08060e;border:1px solid var(--border);border-radius:12px;
+  padding:16px 18px;overflow:auto;line-height:1.55}
+.doc pre code{background:none;padding:0;font-size:.9em;color:#d7d3e6}
+.doc table{border-collapse:collapse;width:100%;margin:1.2em 0}
+.doc th,.doc td{border:1px solid var(--border);padding:9px 12px;text-align:left}
+
+/* TODO placeholders */
+mark.todo{background:var(--todo-bg);border:1px dashed var(--todo-bd);color:var(--todo-tx);
+  padding:.05em .4em;border-radius:6px;font-weight:600}
+
+/* index */
+.hero{text-align:center;padding:46px 0 22px}
+.hero .biglogo{width:74px;height:74px;border-radius:20px;margin:0 auto 18px;
+  background:linear-gradient(135deg,var(--accent2),var(--accent));
+  display:grid;place-items:center;font-size:38px;box-shadow:0 14px 40px rgba(192,38,211,.45)}
+.hero h1{font-size:clamp(30px,7vw,44px);margin:0 0 8px;color:var(--heading);letter-spacing:-.02em}
+.hero p{color:var(--muted);font-size:1.08em;margin:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin:28px 0}
+.card{display:block;padding:20px;border-radius:var(--radius);background:var(--surface);
+  border:1px solid var(--border);transition:.16s;color:inherit}
+.card:hover{transform:translateY(-3px);background:var(--surface-2);
+  border-color:rgba(192,38,211,.4);text-decoration:none;
+  box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.card .ic{font-size:26px}
+.card h3{margin:12px 0 6px;color:var(--heading);font-size:1.12em}
+.card p{margin:0;color:var(--muted);font-size:.92em}
+.support{margin:8px 0 0;padding:22px;border-radius:var(--radius);text-align:center;
+  background:linear-gradient(135deg,rgba(124,58,237,.18),rgba(192,38,211,.18));
+  border:1px solid rgba(192,38,211,.3)}
+.support h3{margin:0 0 6px;color:var(--heading)}
+.support p{margin:0 0 14px;color:var(--muted)}
+
+footer{border-top:1px solid var(--border);padding:26px 0 40px;color:var(--muted);font-size:.9em}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;justify-content:space-between}
+footer a{color:var(--muted)}
+@media(max-width:520px){.topbar .brand small{display:none}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="../"><span class="logo">🛡</span><span>Lumino VPN<small>Пользовательское соглашение</small></span></a>
+  <span class="spacer"></span>
+  <a class="btn" href="../">Все документы</a>
+  <a class="btn primary" href="https://t.me/LuminoVPNBot">Поддержка</a>
+</div></header>
+<main><div class="wrap"><article class="doc">
+<h1 id="пользовательское-соглашение-lumino-vpn">Пользовательское
+соглашение Lumino VPN</h1>
+<p><em>Дата последнего обновления: 24.06.2026</em></p>
+<p>Настоящее Пользовательское соглашение (далее — «Соглашение»)
+регулирует отношения между сервисом <strong>Lumino VPN</strong> (далее —
+«Сервис», «мы») и любым физическим лицом (далее — «Пользователь», «вы»),
+использующим наш Telegram-бот <a
+href="https://t.me/LuminoVPNBot">@LuminoVPNBot</a>, приложения и сайт
+<strong>lumino-vpn.fun</strong>.</p>
+<blockquote>
+<p>⚠️ Начиная пользоваться Сервисом — оформляя пробный период, оплачивая
+подписку или подключаясь к серверам Lumino VPN — вы подтверждаете, что
+прочитали, поняли и полностью принимаете условия настоящего
+Соглашения.</p>
+</blockquote>
+<hr />
+<h2 id="1-термины">1. Термины</h2>
+<ul>
+<li><strong>Сервис</strong> — программно-аппаратный комплекс Lumino VPN,
+обеспечивающий доступ к защищённому VPN-соединению.</li>
+<li><strong>Подписка</strong> — право пользоваться Сервисом в течение
+оплаченного срока и в рамках выбранного тарифа.</li>
+<li><strong>Ключ / Ссылка подписки</strong> — персональная конфигурация
+для подключения вашего устройства.</li>
+<li><strong>Личный кабинет</strong> — раздел в боте <a
+href="https://t.me/LuminoVPNBot">@LuminoVPNBot</a> и в приложении, где
+вы управляете подписками и настройками.</li>
+</ul>
+<hr />
+<h2 id="2-предмет-соглашения">2. Предмет Соглашения</h2>
+<p>2.1. Сервис предоставляет Пользователю доступ к VPN-серверам для
+шифрования интернет-трафика и обеспечения приватного и стабильного
+соединения.</p>
+<p>2.2. Сервис носит исключительно технический характер и предназначен
+для <strong>защиты вашей приватности и безопасности</strong> в сети.</p>
+<p>2.3. Доступ предоставляется «как есть» (as is). Мы постоянно работаем
+над стабильностью, но не можем гарантировать абсолютную бесперебойность
+по причинам, не зависящим от нас (действия операторов связи, блокировки,
+форс-мажор).</p>
+<hr />
+<h2 id="3-доступ-и-учётная-запись">3. Доступ и учётная запись</h2>
+<p>3.1. Доступ к Сервису осуществляется через Telegram-аккаунт
+Пользователя и/или приложение Lumino VPN.</p>
+<p>3.2. Пользователь самостоятельно несёт ответственность за сохранность
+доступа к своему Telegram-аккаунту и ссылкам подписки.</p>
+<p>3.3. Передавать ключ/ссылку подписки третьим лицам не рекомендуется:
+одновременное подключение ограничено количеством устройств вашего
+тарифа.</p>
+<hr />
+<h2 id="4-права-и-обязанности-пользователя">4. Права и обязанности
+Пользователя</h2>
+<p>Пользователь <strong>обязуется</strong>:</p>
+<ul>
+<li>использовать Сервис только в законных целях;</li>
+<li>не передавать доступ для массовой перепродажи без согласования с
+Сервисом;</li>
+<li>не использовать Сервис для действий, нарушающих законодательство,
+причиняющих вред третьим лицам или создающих чрезмерную нагрузку на
+инфраструктуру (спам, рассылки, ботнеты, DDoS, сканирование, майнинг и
+т. п.).</li>
+</ul>
+<p>Пользователь <strong>вправе</strong>:</p>
+<ul>
+<li>пользоваться всеми возможностями выбранного тарифа;</li>
+<li>обращаться в поддержку <a
+href="https://t.me/LuminoVPNBot">@LuminoVPNBot</a> по любым
+вопросам;</li>
+<li>отказаться от использования Сервиса в любой момент.</li>
+</ul>
+<hr />
+<h2 id="5-права-и-обязанности-сервиса">5. Права и обязанности
+Сервиса</h2>
+<p>5.1. Сервис обязуется прилагать разумные усилия для поддержания
+стабильной работы серверов и сохранности минимально необходимых
+данных.</p>
+<p>5.2. Сервис вправе <strong>ограничить или приостановить
+доступ</strong> Пользователю, нарушающему пункт 4 настоящего Соглашения,
+без возврата средств.</p>
+<p>5.3. Сервис вправе изменять состав серверов, тарифы и
+функциональность с целью улучшения качества услуги.</p>
+<hr />
+<h2 id="6-конфиденциальность">6. Конфиденциальность</h2>
+<p>6.1. Мы придерживаемся принципа <strong>минимизации данных</strong> и
+не ведём журналов вашего трафика, посещённых сайтов и содержимого
+соединений.</p>
+<p>6.2. Для работы Сервиса обрабатываются только технически необходимые
+данные: идентификатор Telegram, информация о подписке и оплате.</p>
+<p>6.3. Мы не передаём ваши данные третьим лицам, кроме случаев, прямо
+предусмотренных законом.</p>
+<hr />
+<h2 id="7-оплата">7. Оплата</h2>
+<p>7.1. Стоимость и условия подписок указаны в боте <a
+href="https://t.me/LuminoVPNBot">@LuminoVPNBot</a> на момент
+оформления.</p>
+<p>7.2. Порядок возврата средств описан в отдельном документе —
+<strong>«Политика возврата»</strong>.</p>
+<hr />
+<h2 id="8-ограничение-ответственности">8. Ограничение
+ответственности</h2>
+<p>8.1. Сервис не несёт ответственности за временные перебои, вызванные
+действиями операторов связи, государственными ограничениями или
+форс-мажором.</p>
+<p>8.2. Сервис не отвечает за действия Пользователя в сети и за контент,
+к которому Пользователь получает доступ.</p>
+<p>8.3. Совокупная ответственность Сервиса в любом случае ограничена
+стоимостью неиспользованной части оплаченной подписки.</p>
+<hr />
+<h2 id="9-изменения-соглашения">9. Изменения Соглашения</h2>
+<p>9.1. Мы вправе обновлять настоящее Соглашение. Актуальная версия
+всегда доступна по ссылке из бота.</p>
+<p>9.2. Продолжение использования Сервиса после изменений означает
+согласие с новой редакцией.</p>
+<hr />
+<h2 id="10-контакты">10. Контакты</h2>
+<p>По всем вопросам — наша поддержка: <a
+href="https://t.me/LuminoVPNBot">@LuminoVPNBot</a></p>
+<p><strong>Lumino VPN</strong> — свободный интернет под защитой. 🛡</p>
+
+</article></div></main>
+<footer><div class="wrap">
+  <span>© Lumino VPN — свободный интернет под защитой 🛡</span>
+  <span><a href="../">Документы</a> · <a href="https://t.me/LuminoVPNBot">Поддержка</a></span>
+</div></footer>
+</body>
+</html>
